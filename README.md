@@ -42,6 +42,7 @@ evaluate('1&1&0'); // false
 ```javascript
 evaluate('!0'); // true
 evaluate('!1'); // false
+evaluate('!0&0&1'); // false
 ```
 
 ##### Expression with parenthesis
