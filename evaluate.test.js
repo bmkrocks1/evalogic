@@ -433,8 +433,12 @@ describe('evalogic', () => {
       expect(evaluate('(!1)&(!0|1)')).to.be.false;
     });
 
-    it('should evaluate "(!1|!0&(!0&1|(!1)))&(!0|1)" to false', () => {
-      expect(evaluate('(!1|!0&(!0&1|(!1)))&(!0|1)')).to.be.false;
+    it('should evaluate "(!1|!0&(!0&1|(!1)))&(!0|1)" to true', () => {
+      expect(evaluate('(!1|!0&(!0&1|(!1)))&(!0|1)')).to.be.true;
+    });
+
+    it('should evaluate "(!0&0&1)" to false', () => {
+      expect(evaluate('(!0&0&1)')).to.be.false;
     });
   });
 });

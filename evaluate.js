@@ -43,7 +43,8 @@ export function evaluate(expression) {
     } else if (char === '|' || char === '&') {
       while (
         operatorStack.length > 0 &&
-        operatorStack[operatorStack.length - 1] === '&'
+        operatorStack[operatorStack.length - 1] === '&' ||
+        operatorStack[operatorStack.length - 1] === '!'
       ) {
         performOperation();
       }
